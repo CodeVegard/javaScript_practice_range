@@ -1,0 +1,4 @@
+
+console.log('test')
+
+document.getElementById('header_dom').innerHTML = ('<header class="header_dom"><div class="header_top"><a href="index.html"><img src="images/logo_negative.png" alt="logo image" class="logo"></a><p class="site_name">JavaScript Practice Range</p><div class="block"></div></div><label for="hamburger_menu" class="menubox"><i class="fas fa-bars" id="menu_icon"></i></label><input type="checkbox" name="hamburger_menu" id="hamburger_menu" /><nav class="navigation"><ul class="nav_undordered"><li class="nav_item"><a href="index.html">Home</a></li><li class="nav_item"><a href="">Here</a></li><li class="nav_item"><a href="">There</a></li><li class="nav_item"><a href="">Something</a></li><li class="nav_item"><a href="">Nothing</a></li><li class="nav_item"><a href="">Party</a></li></ul></nav>');

@@ -1,0 +1,99 @@
+/* Imports on top */
+@import url(variables.css);
+
+/* Global styles */ 
+body{
+    margin: 0;
+    background-color: var(--offwhite);
+}
+
+p, a, li{
+    font-family: var(--body-font);
+}
+
+/* Header styles */
+
+.header_top{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    border-bottom: 2px solid black;
+    margin: 0;
+    padding: 0;
+    height: 50px;
+}
+
+.logo{
+    height: 50px;
+    width: 55px;
+    background-color: var(--deepblue);
+}
+
+.site_name{
+    font-size: 1.5rem;
+    text-align: center;
+    font-family: var(--header-font);
+}
+
+.block{
+    height: 50px;
+    width: 55px;
+}
+
+.navigation{
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.nav_undordered{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin: 0px;
+    background-color: var(--offwhite);
+    width: 200px;
+    border-radius: 0px 0px 0px 15px;
+    padding: 0px;
+    align-items: flex-end;
+    border: 2px solid black;
+    border-top: none;
+}
+
+.nav_item{
+    list-style: none;
+    margin: 10px 15px;
+}
+
+.nav_item > a{
+    font-family: var(--header-font);
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+
+#hamburger_menu{
+    display: none;
+}
+
+#hamburger_menu:checked ~ nav{
+    display: block;
+    position: absolute;
+    width: 250px;
+    left: calc(100% - 250px);
+    top: 50px;
+    
+}
+
+#menu_icon{
+    font-size: 2rem;
+    display: block;
+    position: absolute;
+    z-index: 1;
+    top: 1.2%;
+    right: 2.5%;
+    padding: 0rem 1rem;
+}
+
+#menu_icon:hover{
+    cursor: pointer;
+    position: absolute;
+}
