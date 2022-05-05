@@ -18,6 +18,7 @@ main{
 
 section{
     margin: 50px auto;
+    max-width: 700px;
 }
 
 article > p{
@@ -26,6 +27,7 @@ article > p{
 
 section:nth-of-type(1){
     margin-top: 0px;
+    text-align: center;
 }
 
 /* Header styles */
@@ -117,7 +119,6 @@ section:nth-of-type(1){
 
 
 /* Main styles */
-
 
 
 /* Footer styles */
