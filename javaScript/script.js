@@ -8,7 +8,7 @@ footer.innerHTML = '<div class="footer_contentbox"><div class="about"><h2 class=
 const pagename = document.getElementsByClassName('site_name')[0];
 const headingOne = document.getElementById('heading_one');
 let firstParagraph = document.getElementsByClassName('paragraph')[0];
-let secondParahraph = document.getElementsByClassName('paragraph')[1];
+let secondParahraph = document.querySelector('.primary_section :nth-child(2n+3)');
 
 let width = window.screen.width;
 
