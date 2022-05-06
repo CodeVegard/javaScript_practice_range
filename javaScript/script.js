@@ -27,3 +27,52 @@ if (width <= 450){
     firstParagraph.innerHTML = 'This screen is so big, I feel kinda small.';
     secondParahraph.innerHTML = 'This is the second paragraph on big screens. However, I want this to also target the 3rd paragraph. More research is needed.';
 }
+
+
+//Below I am following this tutorial: https://www.freecodecamp.org/news/learn-how-to-manipulate-css-with-javascript-by-coding-a-dynamic-picture-frame/
+
+//Width sliders
+let borderRange = document.getElementById('border-range');
+let paddingRange = document.getElementById('padding-range');
+let contentRange = document.getElementById('content-range');
+
+//Color sliders 
+let borderColor = document.getElementById('border-color');
+let paddingColor = document.getElementById('padding-color');
+let contentColor = document.getElementById('content-color');
+
+//Elements that will be changed
+let borderBox = document.querySelector('.border');
+let paddingBox = document.querySelector('.padding');
+let contentBox = document.querySelector('.content');
+
+//Functions changing width on my DOMs
+borderRange.addEventListener('change', function(){
+    borderBox.style.padding = borderRange.value + 'px';
+})
+paddingRange.addEventListener('change', function(){
+    paddingBox.style.padding = paddingRange.value + 'px';
+})
+contentRange.addEventListener('change', function(){
+    contentBox.style.padding = contentRange.value + 'px';
+})
+
+//Functions changing colors on my DOMs
+borderColor.addEventListener('change', function(){
+    borderBox.style.backgroundColor = borderColor.value;
+})
+paddingColor.addEventListener('change', function(){
+    paddingBox.style.backgroundColor = paddingColor.value;
+})
+contentColor.addEventListener('change', function(){
+    contentBox.style.backgroundColor = contentColor.value;
+})
+
+// Done, but let's add some more stuff. I'll make a cake-resizer!
+let cakeSize = document.getElementById('cake-size');
+let cake = document.querySelector('.cake');
+
+cakeSize.addEventListener('change', function(){
+    cake.style.fontSize = cakeSize.value + 'rem';
+    console.log('Cake size changed');
+})
