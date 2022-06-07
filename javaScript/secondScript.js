@@ -12,5 +12,5 @@ let news = [
 let newsContainer = document.querySelector("news_container");
 
 for (let i = 0; news.length; i++){
-    console.log(news.summary)
+    
 }
