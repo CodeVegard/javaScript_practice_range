@@ -79,3 +79,53 @@ for (i = 0; i < products.length; i++){
     let listItems = products[i];
     unorderedList.innerHTML += "<li>" + listItems.name + " " + "-" + " " +  listItems.price + "</li>";
 };
+
+/*
+function multiplyIfNumber (firstNumber, secondNumber){
+    let numCheck1 = typeof firstNumber; 
+    let numCheck2 = typeof secondNumber;
+    if (numCheck1!=="number" || numCheck2!=="number"){
+        let errorMessage = "Please supply number values";
+        return errorMessage;  
+    } 
+    return firstNumber*secondNumber;
+}; 
+
+let result = multiplyIfNumber(2,3);
+console.log(result);
+*/
+
+
+function threeArg(arg1, arg2, arg3){
+    let firstArg = typeof arg1;
+    let secondArg = typeof arg2;
+    let thirdArg = typeof arg3;
+    let lengthOfArg1 = arg1.length;
+    let lengthOfArg2 = arg2.length;
+    let lengthOfArg3 = arg3.length;
+    if (firstArg === "string" && secondArg === "string" && thirdArg === "string")
+        return lengthOfArg1 + lengthOfArg2 + lengthOfArg3;
+    if (firstArg !== "number" && secondArg !== "number" && thirdArg !== "number"){
+        return "Invalid argument types"
+    }
+    if (firstArg === "number" && secondArg === "number" && thirdArg === "number"){
+        return arg1 + arg2 + arg3;
+    }
+};
+
+let result = threeArg("a,2,3","3,2,3","31,2,3");
+console.log(result);
+let pElement = document.querySelector(".fill_me");
+pElement.innerHTML = result;
+
+let header = document.querySelector(".quest5");
+let headingBtn = document.querySelector(".heading_btn");
+headingBtn.onclick = function updateHeader() {
+    header.innerHTML += ": Updated"
+};
+
+
+let titleBtn = document.querySelector(".title");
+titleBtn.onclick = function(){
+    document.title = "I've been updated!"
+};
