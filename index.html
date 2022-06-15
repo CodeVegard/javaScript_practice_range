@@ -1,75 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Practice Range</title>
+    <script
+      src="https://kit.fontawesome.com/efafec28fb.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&family=Open+Sans:wght@500&family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>JavaScript Practice Range</title>
-  <script src="https://kit.fontawesome.com/efafec28fb.js" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="css/styles.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&family=Open+Sans:wght@500&family=Roboto&display=swap"
-    rel="stylesheet" />
-</head>
+  <body>
+    <header id="header_dom"></header>
 
-<body>
-  <header id="header_dom"></header>
+    <main>
+      <section class="primary_section">
+        <h1 id="heading_one"></h1>
+        <p class="paragraph"></p>
+        <p class="paragraph"></p>
+        <p class="paragraph"></p>
+        <p class="paragraph"></p>
+      </section>
 
-  <main>
-    <section class="primary_section">
-      <h1 id="heading_one"></h1>
-      <p class="paragraph"></p>
-      <p class="paragraph"></p>
-      <p class="paragraph"></p>
-      <p class="paragraph"></p>
-    </section>
+      <section>
+        <h2>Link</h2>
+        <p>
+          <a href="second.html"
+            >Here's a link to second.html, where I practice with innerHTML</a
+          >
+        </p>
+      </section>
 
-    <section>
-      <h2>Link</h2>
-      <p><a href="second.html">Here's a link</a></p>
-    </section>
-
-    <section class="picture_frame_tutorial">
-      <!--  Below I am following this tutorial: https://www.freecodecamp.org/news/learn-how-to-manipulate-css-with-javascript-by-coding-a-dynamic-picture-frame/ -->
-      <h2>CSS Picture Frame</h2>
-      <div class="border">
-        <div class="padding">
-          <div class="content">
-            <p class="cake">&#127856;</p>
+      <section class="picture_frame_tutorial">
+        <!--  Below I am following this tutorial: https://www.freecodecamp.org/news/learn-how-to-manipulate-css-with-javascript-by-coding-a-dynamic-picture-frame/ -->
+        <h2>CSS Picture Frame</h2>
+        <div class="border">
+          <div class="padding">
+            <div class="content">
+              <p class="cake">&#127856;</p>
+            </div>
           </div>
         </div>
-      </div>
-      <fieldset class="inputs">
-        <div class="size">
-          <label for="cake-size"><h3>Cake Size:</h3></label>
-          <input type="range" name="cake-size" id="cake-size" min="1" max="10" value="1">
-        </div>
-        <div id="sliders">
-          <h3>Border:</h3>
-          <input type="range" name="border-range" id="border-range" min="10" max="100">
-          <h3>Padding:</h3>
-          <input type="range" name="padding-range" id="padding-range" min="10" max="100">
-          <h3>Content:</h3>
-          <input type="range" name="content-range" id="content-range" min="10" max="100">
-        </div>
+        <fieldset class="inputs">
+          <div class="size">
+            <label for="cake-size"><h3>Cake Size:</h3></label>
+            <input
+              type="range"
+              name="cake-size"
+              id="cake-size"
+              min="1"
+              max="10"
+              value="1"
+            />
+          </div>
+          <div id="sliders">
+            <h3>Border:</h3>
+            <input
+              type="range"
+              name="border-range"
+              id="border-range"
+              min="10"
+              max="100"
+            />
+            <h3>Padding:</h3>
+            <input
+              type="range"
+              name="padding-range"
+              id="padding-range"
+              min="10"
+              max="100"
+            />
+            <h3>Content:</h3>
+            <input
+              type="range"
+              name="content-range"
+              id="content-range"
+              min="10"
+              max="100"
+            />
+          </div>
 
-        <div id="colors">
-          <h3>Border Color:</h3>
-          <input type="color" name="border-color" id="border-color">
-          <h3>Padding Color:</h3>
-          <input type="color" name="padding-color" id="padding-color">
-          <h3>Content Color:</h3>
-          <input type="color" name="content-color" id="content-color">
-        </div>
-      </fieldset>
-    </section>
-  </main>
+          <div id="colors">
+            <h3>Border Color:</h3>
+            <input type="color" name="border-color" id="border-color" />
+            <h3>Padding Color:</h3>
+            <input type="color" name="padding-color" id="padding-color" />
+            <h3>Content Color:</h3>
+            <input type="color" name="content-color" id="content-color" />
+          </div>
+        </fieldset>
+      </section>
+    </main>
 
-  <footer id="footer_dom"></footer>
-  <script src="javaScript/script.js"></script>
-</body>
-
+    <footer id="footer_dom"></footer>
+    <script src="javaScript/script.js"></script>
+  </body>
 </html>

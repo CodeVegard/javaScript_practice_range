@@ -76,3 +76,5 @@ cakeSize.addEventListener('change', function(){
     cake.style.fontSize = cakeSize.value + 'rem';
     console.log('Cake size changed');
 })
+
+//--------Practicing "Stand in line" functions------------
