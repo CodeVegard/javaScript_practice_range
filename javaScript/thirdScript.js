@@ -39,3 +39,28 @@ console.log(typeof locallyStoredPerson); // string
 
 let parsedPerson = JSON.parse(locallyStoredPerson);
 console.log(typeof parsedPerson); // object
+
+// Here's a codealong from JavaScript Module 1, lesson 4
+// Let's make a simple age checker
+
+const input = document.querySelector("input");
+const button = document.querySelector("button");
+
+button.onclick = function(){
+  const age = input.value;
+  const isAgeOk = isOldEnough(age);
+
+  console.log(isAgeOk);
+  if (isAgeOk){
+    console.log("Old enough, entering site")
+    document.location.href="index.html";
+  } else {
+    console.log("Not old enough, blocked")
+  }
+}
+
+function isOldEnough(ageToCheck){
+  if(ageToCheck >= 13){
+    return true
+  } return false
+}
