@@ -214,5 +214,13 @@ a > i{
     margin-right: 30px;
     }
 
+/* Add list CSS */
+
+.checked{
+    text-decoration:line-through;
+    color: red;
+}
+
+
 /* Media Queries */
 
