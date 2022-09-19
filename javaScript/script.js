@@ -78,3 +78,17 @@ cakeSize.addEventListener('change', function(){
 })
 
 //--------Practicing functions------------
+
+//setInterval demo
+
+let count = 0;
+
+function theCountIs(number) {
+    count++;
+    if(count === 5){
+        clearInterval(intervalID);
+    }
+    console.log("The count is " + count);
+}
+
+const intervalID = setInterval(theCountIs, 500);
