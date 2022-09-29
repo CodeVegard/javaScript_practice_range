@@ -74,12 +74,119 @@ const result = document.querySelector(".result");
 try {
     getSomething();  //This is the code we want to try to execute
     console.log("success")
-    result.innerHTML = "Success!"
+    result.innerHTML = "Success!" // Feedback to the user
+
     // This whole block will run if the code runs successfully 
 } catch (error) {
     console.log("Error occured", error); 
     // This is what runs if the code fails to execute
     // In this case, we console log that an error occured and the error message
     result.innerHTML = "Function did not run"; //Feedback to end user
+} finally {
+    // Runs regardless of what happens in the try statement
+    // 
 };
 
+//-----------------------------------------------
+// Arrow functions from JavaScript lesson 3.3
+
+// Let's look at a function statement, then rewrite it as an arrow function:
+// function logMessage() {
+//     console.log("hello");
+// }
+
+const logMessage = (message) => {
+    console.log(message);
+};
+
+// Note, when we only have one (1) parameter, we dont have to use () around our parameter
+// I'll use the braces however, as a means of making the syntax easier to remember
+// We could make the code above into one line if we like:
+const logMessageLine = message => {console.log(message)};
+
+// Let's make an arrow function with two parameters:
+// const subtract = (a, b) => {
+//     return a-b;
+// };
+
+// const sum = subtract(4, 3);
+// console.log(sum);
+
+// Let's rewrite it into one line. When your syntax is one line, 
+// you don't need the return statement, as it is implicit:
+const subtract = (a, b) => a-b;
+
+const sum = subtract(4, 3);
+console.log(sum);
+
+// The example below is passing a function statement into our forEach.
+
+const arr = ["blue", "red", "green"];
+
+arr.forEach(function(item) {
+    console.log(item);
+});
+
+// Let's rewrite it using an arrow function.
+arr.forEach((item) => console.log(item));
+
+// This is also handy in setTimeout functions:
+setTimeout(() => console.log("SetTimeout"), 1000);
+
+// Both arrow functions and function statements are valid, it's all about legibillity
+
+
+//-----------------------------------------------
+// JavaScript 3.3 Task 1
+// Convert the functions below to one-line arrow functions
+
+// function greet(name) {
+//     return `Hello ${name}!`;
+//   }
+  
+//   function add(a, b) {
+//     return a + b;
+//   }
+
+const greet = (name) => `Hello ${name}!`;
+
+const add = (a,b) => a+b;
+
+//-----------------------------------------------
+// JavaScript 3.3 Task 2
+// Convert the following from async/await to then/catch:
+// async function getCatFacts() {
+//     try {
+//       const response = await fetch("https://noroff.herokuapp.com/v1/cat-facts/facts");
+//       const results = await response.json();
+//       console.log(results.length);
+//     } catch (error) {
+//       console.log(error);
+//     }
+//   }
+
+function getCatFacts1() {
+    fetch("https://noroff.herokuapp.com/v1/cat-facts/facts")
+    .then(function(response){
+        return response.json();
+    }).then(function(results){
+        console.log(results.length);
+    }).catch(function(error = "API Call failed"){
+        console.log(error);
+    })
+};
+
+getCatFacts1();
+
+//-----------------------------------------------
+// Time for bonus points! Rewrite it into arrow functions:
+
+function getCatFacts2() {
+    fetch("https://noroff.herokuapp.com/v1/cat-facts/facts")
+    .then((response) => response.json())
+    .then((results) => console.log(results.length))
+    .catch((error = "API Call failed") => 
+        console.log(error))
+};
+
+getCatFacts2();
