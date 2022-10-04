@@ -131,7 +131,7 @@ arr.forEach(function(item) {
 arr.forEach((item) => console.log(item));
 
 // This is also handy in setTimeout functions:
-setTimeout(() => console.log("SetTimeout"), 1000);
+// setTimeout(() => console.log("SetTimeout"), 1000);
 
 // Both arrow functions and function statements are valid, it's all about legibillity
 
@@ -165,28 +165,108 @@ const add = (a,b) => a+b;
 //     }
 //   }
 
-function getCatFacts1() {
-    fetch("https://noroff.herokuapp.com/v1/cat-facts/facts")
-    .then(function(response){
-        return response.json();
-    }).then(function(results){
-        console.log(results.length);
-    }).catch(function(error = "API Call failed"){
-        console.log(error);
-    })
-};
+// function getCatFacts1() {
+//     fetch("https://noroff.herokuapp.com/v1/cat-facts/facts")
+//     .then(function(response){
+//         return response.json();
+//     }).then(function(results){
+//         console.log(results.length);
+//     }).catch(function(error = "API Call failed"){
+//         console.log(error);
+//     })
+// };
 
-getCatFacts1();
+// getCatFacts1();
+
+// //-----------------------------------------------
+// // Time for bonus points! Rewrite it into arrow functions:
+
+// function getCatFacts2() {
+//     fetch("https://noroff.herokuapp.com/v1/cat-facts/facts")
+//     .then((response) => response.json())
+//     .then((results) => console.log(results.length))
+//     .catch((error = "API Call failed") => 
+//         console.log(error))
+// };
+
+// getCatFacts2();
+
 
 //-----------------------------------------------
-// Time for bonus points! Rewrite it into arrow functions:
+// Practicing API calls from lesson 3.4 
 
-function getCatFacts2() {
-    fetch("https://noroff.herokuapp.com/v1/cat-facts/facts")
-    .then((response) => response.json())
-    .then((results) => console.log(results.length))
-    .catch((error = "API Call failed") => 
-        console.log(error))
-};
+// const elephantURL = "https://elephant-api.herokuapp.com/elephants";
+// const proxy = "https://noroffcors.herokuapp.com/";
 
-getCatFacts2();
+// const corsFix = proxy + elephantURL;
+
+// const elephantDiv = document.querySelector(".elephantDiv");
+
+// async function elephantAPICall(){
+//     try {
+//       const response = await fetch (corsFix);
+//       const result = await response.json();
+//       console.log(result);
+//       elephantDiv.innerHTML = "Elephant success"
+//     } catch (error) {
+//         console.log(error);
+//         elephantDiv.innerHTML = "Elephant fail " + error;
+//     };
+// };
+
+// elephantAPICall();
+
+//-----------------------------------------------
+// const newAPIKey = "Placeholder value"
+
+// const newURL = `https://api.spoonacular.com/recipes/716429/information?apiKey=${newAPIKey}&includeNutrition=true`;
+
+// async function getDataInit() {
+//     const response = await fetch(newURL);
+//     const data = await response.json();
+//     console.log(data);
+// };
+
+// getDataInit();
+
+//-----------------------------------------------
+// Lesson 3.4 Task 
+
+// Question 1
+
+// console.log("------Task 3.4 Q1------")
+
+// const CORS_URL = "https://noroffcors.herokuapp.com/";
+// const API_URL = "https://elephant-api.herokuapp.com/elephants";
+// const fixedURL = CORS_URL + API_URL;
+
+// async function getElephants() {
+//   const response = await fetch(fixedURL);
+//   const results = await response.json();
+//   console.log(results);
+// }
+
+// getElephants();
+
+// Question 2
+// const object = {
+//     method: "GET",
+//     headers: {
+// 		'X-RapidAPI-Key': 'cf20291d03msh606de863d9eeba0p10f22cjsnad6391b44ddc',
+// 		'X-RapidAPI-Host': 'urban-dictionary7.p.rapidapi.com'
+//     }
+// }
+
+// const API_URL = "https://mashape-community-urban-dictionary.p.rapidapi.com/define?term=wat";
+
+// async function callUrbanDictionary() {
+//   const response = await fetch(API_URL);
+//   const results = await response.json();
+//   console.log(results);
+// }
+
+// callUrbanDictionary();
+
+// Bad result because I can't find the correct key in RapidAPI, 
+// but the method is correct
+
