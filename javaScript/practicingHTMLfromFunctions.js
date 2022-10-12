@@ -270,3 +270,24 @@ const add = (a,b) => a+b;
 // Bad result because I can't find the correct key in RapidAPI, 
 // but the method is correct
 
+//-----------------------------------------------
+// Lesson 4.2 Task 
+
+const url = "https://breakingbadapi.com/api/characters/6";
+const characterBox = document.querySelector(".task-four-two");
+
+async function displayCharacter() {
+    try {
+        const response = await fetch(url);
+        const json = await response.json();
+        const charData = json[0];
+        characterBox.innerHTML = 
+                                `<h4>Name: ${charData.name}</h4>
+                                <img src="${charData.img}" alt="${json.name}">
+                                <p>Status: ${charData.status}</p>`;
+    } catch (error) {
+        characterBox.innerHTML = `<h4>${error}</h4>`;
+    }
+};
+
+displayCharacter();
