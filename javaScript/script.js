@@ -92,3 +92,16 @@ function theCountIs(number) {
 }
 
 const intervalID = setInterval(theCountIs, 500);
+
+const container = document.querySelector(".createhtml");
+
+let arr = ["dette", "er", "en", "liste"];
+
+function createHTML(array){
+    for (let i = 0; i < array.length; i++) { 
+        const ord = array[i];
+        container.innerHTML += `<li>${arr[i]}</li>`;
+    };
+}
+
+createHTML(arr);
