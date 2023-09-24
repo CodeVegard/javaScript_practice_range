@@ -105,3 +105,14 @@ function createHTML(array){
 }
 
 createHTML(arr);
+
+localStorage.clear();
+
+localStorage.setItem('firstName', 'Vegard');
+
+const nameField = document.querySelector("#name");
+
+const firstName = localStorage.getItem('firstName');
+console.log("firstname is " + firstName);
+
+nameField.innerHTML = firstName;
