@@ -44,28 +44,43 @@
 
 // Testing reduce();
 
-const products = [
-  { title: 'Cheese', inStock: false, quantity: 2, price: 15.0 },
-  { title: 'Milk', inStock: true, quantity: 5, price: 8.99 },
-  { title: 'Bread', inStock: true, quantity: 3, price: 22.0 },
-  { title: 'Egg', inStock: true, quantity: 12, price: 5 },
-];
+// const products = [
+//   { title: 'Cheese', inStock: false, quantity: 2, price: 15.0 },
+//   { title: 'Milk', inStock: true, quantity: 5, price: 8.99 },
+//   { title: 'Bread', inStock: true, quantity: 3, price: 22.0 },
+//   { title: 'Egg', inStock: true, quantity: 12, price: 5 },
+// ];
+
 
 // const sum = products.reduce((total, product) => {
-//   if (product.inStock === true) {
+//   if (product.inStock){
 //     total += product.price * product.quantity;
-//     return total;
 //   }
+//   return total;
 // }, 0);
 // console.log(sum);
 
-const sum = products.reduce((total, product) => {
-  if (product.inStock){
-    total += product.price * product.quantity;
-  }
-  return total;
-}, 0);
-console.log(sum);
+// const refractored = products.reduce((total, product) => product.inStock ? (total += product.price * product.quantity) : total, 0);
+// console.log(refractored);
 
-const refractored = products.reduce((total, product) => product.inStock ? (total += product.price * product.quantity) : total, 0);
-console.log(refractored);
+// Testing find and findIndex:
+
+// const books = [
+//   { title: 'Building a Spaceship', inStock: false },
+//   { title: 'Growing Orchids', inStock: false },
+//   { title: 'River Fisher', inStock: false },
+// ];
+
+// const foundBook = books.find((book) => book.inStock);
+// console.log(foundBook);
+
+// Testing some(); and every();
+
+const modules = [
+  { name: 'Introduction to Programming', isComplete: true },
+  { name: 'HTML', isComplete: true },
+  { name: 'CSS', isComplete: false },
+  { name: 'JavaScript', isComplete: true },
+];
+const hasAllModuleBeenFinished = modules.every((mod) => mod.isComplete);
+console.log(hasAllModuleBeenFinished);
