@@ -76,11 +76,22 @@
 
 // Testing some(); and every();
 
-const modules = [
-  { name: 'Introduction to Programming', isComplete: true },
-  { name: 'HTML', isComplete: true },
-  { name: 'CSS', isComplete: false },
-  { name: 'JavaScript', isComplete: true },
-];
-const hasAllModuleBeenFinished = modules.every((mod) => mod.isComplete);
-console.log(hasAllModuleBeenFinished);
+// const modules = [
+//   { name: 'Introduction to Programming', isComplete: true },
+//   { name: 'HTML', isComplete: true },
+//   { name: 'CSS', isComplete: false },
+//   { name: 'JavaScript', isComplete: true },
+// ];
+// const hasAllModuleBeenFinished = modules.every((mod) => mod.isComplete);
+// console.log(hasAllModuleBeenFinished);
+
+// Testing for in loops
+const person = {
+  firstName: 'Ola',
+  lastName: 'Nordmann',
+  module: 'JavaScript',
+};
+const keysAndValueAsArray = Object.keys(person).map((key) => {
+  return `key: ${key}, value: ${person[key]}`;
+})
+console.log(keysAndValueAsArray)
