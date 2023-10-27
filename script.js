@@ -151,16 +151,16 @@
 
 // Promises:
 
-const myPromise = new Promise ((resolve, reject) => {
-  const shouldResolve = true;
+// const myPromise = new Promise ((resolve, reject) => {
+//   const shouldResolve = true;
   
-  if (shouldResolve){
-    resolve('Promise resolved');
-  } else {
-    reject('Promise rejected');
-  }
-});
+//   if (shouldResolve){
+//     resolve('Promise resolved');
+//   } else {
+//     reject('Promise rejected');
+//   }
+// });
 
-myPromise.then((result) => {
-  console.log(result);
-});
+// myPromise.then((result) => {
+//   console.log(result);
+// });
